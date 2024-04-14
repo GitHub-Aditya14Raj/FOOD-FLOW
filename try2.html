@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="try2.css">
+  <style>
+    body {
+      background-image: url('images/recipefind.jpg'); /* Replace 'background.jpg' with the path to your image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Recipe Finder</h1>
+    <input type="text" id="ingredients" placeholder="Enter ingredients separated by commas">
+    <button onclick="getRecipes()">Search</button>
+    <div id="recipes"></div>
+  </div>
+  <script src="try2.js"></script>
+</body>
+</html>

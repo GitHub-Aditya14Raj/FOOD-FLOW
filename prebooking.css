@@ -1,0 +1,31 @@
+.food_items{
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.food{
+    display: flex;
+    border-radius: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    height: 200px;
+    width: 150px;
+}
+.mybutton{
+    color: white;
+    background-color: red;
+    width: 60px;
+    border-radius: 30px;
+}
+.text{
+    height: 0px;
+}
+.food img{
+    width: 140px;
+    height: 100px;
+    border-radius: 30px;
+   
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrition Analysis</title>
+  <link rel="stylesheet" href="try.css">
+  <style>
+    body {
+      background-image: url('images/nutrianalysis.jpg'); /* Replace 'background.jpg' with the path to your image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Nutrition Analysis</h1>
+    <div>
+      <label for="ingredient">Enter Ingredient:</label>
+      <input type="text" id="ingredient" placeholder="e.g., 1 cup rice">
+      <button onclick="getNutrition()">Analyze</button>
+    </div>
+    <div id="results"></div>
+  </div>
+  <script src="try.js"></script>
+</body>
+</html>

@@ -36,7 +36,6 @@ body {
     height: 100%;
     max-height: 250px;
     background-color: transparent;
-    
 }
 
 .text {
@@ -77,5 +76,3 @@ body {
     color: #555;
     text-decoration: none;
 }
-
-/* Add more styles as needed */

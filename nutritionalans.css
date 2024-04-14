@@ -1,0 +1,96 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Meal selection */
+.meal-selection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.meal-selection div {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.meal-selection img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Nutritional analysis */
+.nutritional-analysis ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nutritional-analysis li {
+    margin-bottom: 5px;
+}
+
+.nutritional-analysis img {
+    max-width: 300px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Related recipes */
+.related-recipes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.related-recipes div {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.related-recipes img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}

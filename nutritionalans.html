@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nutritional Analysis Page</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Meal selection */
+        .meal-selection {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .meal-selection div {
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        .meal-selection img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Nutritional analysis */
+        .nutritional-analysis ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nutritional-analysis li {
+            margin-bottom: 5px;
+        }
+
+        .nutritional-analysis img {
+            max-width: 300px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        /* Related recipes */
+        .related-recipes {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .related-recipes div {
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        .related-recipes img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Buttons */
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NutriProp</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Pre-Book Meals</a>
+            <a href="#">Explore Recipes</a>
+            <a href="#">Nutritional Analysis</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Meal Selection</h2>
+        <div class="meal-selection">
+            <div>
+                <img src="healthy-salad.jpg" alt="Healthy Salad">
+                <button onclick="selectMeal(event, 'Healthy Salad')">Select</button>
+            </div>
+            <div>
+                <img src="protein-bowl.jpg" alt="Protein Bowl">
+                <button onclick="selectMeal(event, 'Protein Bowl')">Select</button>
+            </div>
+            <div>
+                <img src="vegetarian-pasta.jpg" alt="Vegetarian Pasta">
+                <button onclick="selectMeal(event, 'Vegetarian Pasta')">Select</button>
+            </div>
+            <div>
+                <img src="low-carb-wrap.jpg" alt="Low-Carb Wrap">
+                <button onclick="selectMeal(event, 'Low-Carb Wrap')">Select</button>
+            </div>
+        </div>
+
+        <h2>Nutritional Analysis</h2>
+        <ul class="nutritional-analysis">
+            <li>Calories: 750cal (20%)</li>
+            <li>Proteins: 15g(30%)</li>
+            <li>Fats: 19g(15%)</li>
+            <li>Carbohydrates: 30g(25%)</li>
+        </ul>
+        <img src="macronutrient-distribution.jpg" alt="Macronutrient Distribution">
+
+        <h2>Related Recipes</h2>
+        <div class="related-recipes">
+            <div>
+                <img src="morning-oats.jpg" alt="Morning Oats">
+                <button onclick="viewRecipe(event, 'Morning Oats')">View Recipe</button>
+            </div>
+            <div>
+                <img src="easy-veggie-wrap.jpg" alt="Easy Veggie Wrap">
+                <button onclick="viewRecipe(event, 'Easy Veggie Wrap')">View Recipe</button>
+            </div>
+            <div>
+                <img src="spicy-thai-noodles.jpg" alt="Spicy Thai Noodles">
+                <button onclick="viewRecipe(event, 'Spicy Thai Noodles')">View Recipe</button>
+            </div>
+            <div>
+                <img src="energy-bites.jpg" alt="Energy Bites">
+                <button onclick="viewRecipe(event, 'Energy Bites')">View Recipe</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Add any necessary footer content here -->
+    </footer>
+
+    <script>
+        function selectMeal(event, Healthy Salad) {
+            event.preventDefault(); // Prevent default button behavior
+            alert(You selected the ${Healthy Salad} meal.);
+            // Add additional functionality here, if needed
+        }
+
+        function viewRecipe(event, recipeName) {
+            event.preventDefault(); // Prevent default button behavior
+            alert(Viewing recipe for ${recipeName}.);
+            // Add additional functionality here, if needed
+        }
+    </script>
+</body>
+</html>

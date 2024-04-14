@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('images/donationpage.png');
+}
+
+.top-container {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px; /* Adjust margin-top for the shift */
+}
+
+.meal-checkbox {
+  margin-right: 10px;
+}
+
+.button-container {
+  display: flex;
+}
+
+.button-container button {
+  width: 100px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #04AA6D;
+  color:blue;
+  border: none;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-size: 60px 60px;
+}
+#breakfastBtn {
+    background-image: url('images/breakfast.jpg'); /* Add your breakfast image URL here */
+  }
+#lunchBtn{
+    background-image: url('images/lunch.jpg');
+}
+#dinnerBtn{
+    background-image: url('images/dinner.jpg');
+}
+.slidecontainer {
+  width: 80%; /* Adjust the width as needed */
+  text-align: center;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="top-container">
+  <h1>Donate Food</h1>
+  <input type="checkbox" id="vegCheckbox" class="meal-checkbox" onclick="toggleCheckbox('vegCheckbox')">
+  <label for="vegCheckbox">Veg</label>
+  <input type="checkbox" id="nonVegCheckbox" class="meal-checkbox" onclick="toggleCheckbox('nonVegCheckbox')">
+  <label for="nonVegCheckbox">Non-Veg</label>
+</div>
+
+<div class="button-container">
+  <button id="breakfastBtn">Breakfast</button>
+  <button id="lunchBtn" >Lunch</button>
+  <button id="dinnerBtn">Dinner</button>
+</div>
+
+<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  <p>Value: <span id="demo"></span></p>
+</div>
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+function toggleCheckbox(checkboxId) {
+  var checkbox = document.getElementById(checkboxId);
+  if (checkbox.checked) {
+    if (checkboxId === 'vegCheckbox') {
+      document.getElementById('nonVegCheckbox').checked = false;
+    } else {
+      document.getElementById('vegCheckbox').checked = false;
+    }
+  }
+}
+</script>
+
+</body>
+</html>

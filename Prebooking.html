@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Donation Form</title>
+  <link rel="stylesheet" href="prebooking.css">
+  <!-- Add Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.5/firebase-database.js"></script>
+  <script src="Prebooking.js"></script>
+  <script>
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCV0htRpkBUM_nMR-NVlYwkBN4gMJWiD64",
+    authDomain: "food-flow-4f590.firebaseapp.com",
+    databaseURL: "https://food-flow-4f590-default-rtdb.firebaseio.com",
+    projectId: "food-flow-4f590",
+    storageBucket: "food-flow-4f590.appspot.com",
+    messagingSenderId: "407610987375",
+    appId: "1:407610987375:web:fdea58ef02fe95af6cce9a",
+    measurementId: "G-TQN5FTSMPL"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Get a reference to the database
+    const database = firebase.database();
+
+    function donateFood(foodType) {
+      const donorName = document.getElementById('donor_name').value;
+      const quantity = document.getElementById('quantity').value;
+
+      database.ref('donations').push({
+        donorName: donorName,
+        foodType: foodType,
+        quantity: quantity
+      }).then(() => {
+        alert('Food donation recorded successfully!');
+      }).catch(error => {
+        console.error('Error recording donation:', error);
+        alert('Failed to record donation. Please check console for details.');
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Food Donation Form</h1>
+  <label>Donor Name:</label><input type="text" id="donor_name"><br>
+  <label>Food Type:</label><br>
+  <button onclick="donateFood('Vegetables')">Vegetables</button>
+  <button onclick="donateFood('Fruits')">Fruits</button>
+  <button onclick="donateFood('Grains')">Grains</button>
+  <button onclick="donateFood('Dairy')">Dairy</button>
+  <button onclick="donateFood('Meat')">Meat</button>
+  <!-- Add more buttons as needed -->
+  <br>
+  <label>Quantity:</label><input type="number" id="quantity" min="1"><br>
+  <div class="food_items">
+  <div class="food">
+    <img src="https://th.bing.com/th?id=OLC.hNLAPHMavGW6jQ480x360&w=200&h=200&c=8&rs=1&qlt=80&o=6&cdv=1&pid=Local" alt="">
+    <h4 class="text"></h4>
+    <button class="mybutton">
+      Select
+    </button>
+  </div>
+  <div class="food">
+    <img src="https://th.bing.com/th?id=OLC.hNLAPHMavGW6jQ480x360&w=200&h=200&c=8&rs=1&qlt=80&o=6&cdv=1&pid=Local" alt="">
+    <h4 class="text">Pasta</h4>
+    <button class="mybutton">
+      Select
+    </button>
+  </div>
+  <div class="food">
+    <img src="https://th.bing.com/th?id=OLC.hNLAPHMavGW6jQ480x360&w=200&h=200&c=8&rs=1&qlt=80&o=6&cdv=1&pid=Local" alt="">
+    <h4 class="text">Pasta</h4>
+    <button class="mybutton">
+      Select
+    </button>
+  </div>
+  <div class="food">
+    <img src="https://th.bing.com/th?id=OLC.hNLAPHMavGW6jQ480x360&w=200&h=200&c=8&rs=1&qlt=80&o=6&cdv=1&pid=Local" alt="">
+    <h4 class="text">Pasta</h4>
+    <button class="mybutton">
+      Select
+    </button>
+  </div>
+</div>
+</body>
+</html>

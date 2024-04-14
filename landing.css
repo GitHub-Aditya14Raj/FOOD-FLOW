@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  background-image: url('./images/landingbg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+}
+
+h1 {
+  color: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -30%);
+  animation: moveText 5s infinite alternate;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+p {
+  color: #666;
+}
+
+.button-tab-1 {
+  position: relative;
+  top: 150px;
+  left: 300px;
+
+}
+
+.button-tab-2 {
+  position: relative;
+  top: 200px;
+  left: 300px;
+}
+
+
+.btn {
+  height: 220px;
+  width: 220px;
+  border: none;
+  font-size: 35px;
+  margin: 15px;
+  cursor: pointer;
+  border: 2px solid black;
+  padding-top: 175px;
+}
+
+.btn-1 {
+  background: url('images/donationbutt.jpg');
+  background-size: cover;
+  color: white;
+  background-position: center;
+  border-radius: 20px;
+
+}
+.btn-2 {
+  background: url('images/bookingbutt.jpg');
+  color: white;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  
+}
+.btn-3 {
+  background: url('images/nutiansbutt.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+.btn-4 {
+  background: url('images/preservatbutt.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  
+}
+
+
+button:hover {
+  background-color: #b8bdc3;
+}

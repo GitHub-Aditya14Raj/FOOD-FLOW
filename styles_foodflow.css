@@ -1,9 +1,107 @@
-h1 {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #d2b48c;
+    color: white;
     text-align: center;
-}
-h2 {
+    padding: 20px;
+  }
+  
+  main {
     text-align: center;
-}
-ul {
+    padding: 20px;
+  }
+  
+  ul.myUL {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul.myUL li {
+    margin-bottom: 10px;
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #d2b48c;
+    color: white;
     text-align: center;
-}
+    padding: 10px;
+  }
+  
+  .instagram-icon {
+    width: 2%;
+    justify-content: center;
+  }
+  
+  /* Styles for Hero Section */
+  .hero {
+    padding: 50px;
+    text-align: center;
+    position: relative; /* To stack elements within the hero section */
+  }
+  
+  .hero img {
+    width: 100%; /* Adjust image width as needed */
+    object-fit: cover; /* Scales image to fill container while maintaining aspect ratio */
+    opacity: 0.7; /* Reduce image opacity for better text readability on top */
+  }
+  
+  .hero h2 {
+    position: absolute; /* Position the heading on top of the image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the heading within the hero section */
+    color: white;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    background-color: #4CAF50; /* Green color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .button:hover { /* Button hover effect */
+    background-color: #3e8e41;
+  }
+  
+  /* Styles for Category Section (Optional) */
+  .categories {
+    display: flex; /* Arrange category cards horizontally */
+    justify-content: space-around; /* Distribute cards evenly with some spacing */
+    padding: 20px;
+  }
+  
+  .category-card {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  .category-card img {
+    width: 100%; /* Adjust image width as needed */
+    /* Add rounded corners to images if desired */
+  }
+  
+  .category-card h4 {
+    margin-top: 5px;
+  }
+  
