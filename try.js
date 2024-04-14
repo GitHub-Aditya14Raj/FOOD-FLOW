@@ -1,6 +1,6 @@
 function getNutrition() {
     const ingredient = document.getElementById('ingredient').value;
-    const url = `https://api.edamam.com/api/nutrition-data?app_id=ba45a493&app_key=42cb707d8108636d275ae12dbc67c836&ingr=${encodeURIComponent(ingredient)}`;
+    const url = `https://api.edamam.com/api/nutrition-data?app_id=ba45a493&app_key=your api key &ingr=${encodeURIComponent(ingredient)}`;
   
     fetch(url)
       .then(response => response.json())
