@@ -6,7 +6,7 @@ function getRecipes() {
       return;
     }
   
-    fetch(`https://api.edamam.com/search?q=${encodeURIComponent(ingredients)}&app_id=815a736d&app_key=52a1086cf1cf1a194d6ef2b3f55e9ad2`)
+    fetch(`https://api.edamam.com/search?q=${encodeURIComponent(ingredients)}&app_id=815a736d&app_key=your api key`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
