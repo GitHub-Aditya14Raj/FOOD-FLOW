@@ -3,7 +3,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCV0htRpkBUM_nMR-NVlYwkBN4gMJWiD64",
+    apiKey: "your api key",
     authDomain: "food-flow-4f590.firebaseapp.com",
     projectId: "food-flow-4f590",
     storageBucket: "food-flow-4f590.appspot.com",
